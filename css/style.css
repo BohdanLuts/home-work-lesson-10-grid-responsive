@@ -1,0 +1,192 @@
+:root {
+  --mainColourDark: #333;
+  --mainColourLight: #fff;
+  --mainColourBackgr: #eaeaea;
+  --mainColourBlue: #2690d4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+.development,
+.product,
+.mainInfo,
+.footerInfo,
+.devInfo,
+.productBox {
+  display: grid;
+  grid-template-columns: 15% repeat(2, 2fr) 15%;
+}
+
+.headerInfo,
+.develInfo,
+.mainInfoBox,
+.product {
+  grid-column: 2 / 4;
+}
+
+body {
+  color: var(--mainColourLight);
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--mainColourDark);
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 26px;
+  padding: 26px;
+}
+
+header {
+  background: url(https://static.pexels.com/photos/248515/pexels-photo-248515.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 10px;
+}
+
+header h1 {
+  font-size: 35px;
+}
+
+h2,
+header,
+.card p:first-child {
+  font-weight: bold;
+}
+
+header a {
+  display: inline-block;
+  background: var(--mainColourDark);
+  color: var(--mainColourLight);
+  text-decoration: none;
+  padding: 15px;
+  border: 1px solid #666;
+  margin: 10px;
+}
+header a:hover {
+  background: var(--mainColourBackgr);
+  color: var(--mainColourDark);
+}
+
+header p {
+  margin: 20px;
+}
+
+main {
+  color: var(--mainColourDark);
+}
+
+.development,
+.develInfo,
+.mainInfo {
+  background: var(--mainColourBackgr);
+  padding-bottom: 10px;
+}
+.development p {
+  columns: 2;
+}
+
+.product {
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 1fr;
+  padding: 35px 0;
+  justify-content: space-between;
+}
+
+.card {
+  background: var(--mainColourLight);
+  margin: 0 10px;
+}
+
+.cardContent {
+  padding: 26px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card p:first-child {
+  font-size: 20px;
+  margin: 20px 0px;
+}
+
+.card p {
+  margin: 17px 0;
+}
+
+.contact {
+  background: var(--mainColourBlue);
+  grid-column: 1 / 3;
+}
+
+.contact a {
+  color: var(--mainColourLight);
+}
+
+.devInfo {
+  background: #000;
+}
+
+.development,
+.mainInfo,
+.contact,
+.about,
+.devInfo {
+  padding: 35px;
+}
+
+.about,
+.projectBy {
+  grid-column: 3 / 5;
+}
+
+.footerInfo p {
+  padding: 17px;
+}
+.devInfo a {
+  color: var(--mainColourBlue);
+}
+.acme {
+  grid-column: 1 / 3;
+}
+
+@media screen and (max-width: 1150px) {
+  header,
+  .development,
+  .product,
+  .mainInfo,
+  .footerInfo,
+  .devInfo,
+  .productBox {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .development p {
+    columns: 1;
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .card {
+    margin: 15px 0;
+  }
+
+  .contact,
+  .about,
+  .acme,
+  .projectBy {
+    grid-column: 1 / 2;
+  }
+}
